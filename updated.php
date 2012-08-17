@@ -3,5 +3,5 @@
 // read https://help.github.com/articles/post-receive-hooks for more info.
 
 // we dont care about the post payload we get from github.
-exec("git pull");
+echo system("git pull");
 ?>
