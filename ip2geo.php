@@ -1,6 +1,4 @@
 <?php
-// this compresses the page :)
-ob_start ("ob_gzhandler");
 $ip = $_SERVER['REMOTE_ADDR'];
 
 $data = file_get_contents("http://api.ipinfodb.com/v2/ip_query.php?ip=$ip&output=xml&key=a8ac40c258f4b1b9fecb27de7f091272979de523868d4b804e4b58ac9a0755b2");

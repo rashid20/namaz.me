@@ -1,6 +1,4 @@
 <?php
-// this compresses the page :)
-ob_start ("ob_gzhandler");
 $coordinates = $_GET["coords"];
 
 $url = "http://dev.virtualearth.net/REST/v1/Locations/" . $coordinates . "?o=json&key=AqhV8vAz54rShnfvfslyAkFJPNXFk24J_ts7291GVG1hzVcesCorI9zkT4JCKF9I";

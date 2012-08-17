@@ -1,8 +1,4 @@
 <?php
-// this compresses the page :)
-ob_start ("ob_gzhandler");
-
-
 // if using some proxy browser, like for example the nokia ovi browser, than the geolocation api will not work
 // so no need to even try that.
 
