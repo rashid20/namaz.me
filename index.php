@@ -57,14 +57,14 @@ if (stripos($uaString, "series40") !== false &&
 			</li>
 			
 			<li class="menu">
-			<a href="settings.php" title="Adjust settings to better calculte the namaz and salat times">
+			<a href="settings.html" title="Adjust settings to better calculte the namaz and salat times">
 				<img alt="Settings" src="iwebkit/thumbs/settings.png" />
 			<span class="name"><span id="l.settings">Settings</span></span>
 			</a>
 			</li>
 			
 			<li class="menu">
-			<a href="about.php" title="About Namaz.me">
+			<a href="about.html" title="About Namaz.me">
 				<img alt="About" src="iwebkit/thumbs/help.png" />
 			<span class="name"><span id="l.about">About</span></span>
 			</a>
