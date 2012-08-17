@@ -1,3 +1,4 @@
+// author: Ahmad Mushtaq <ahmad.mushtaq@gmail.com
 function CountDown() {	
 	window.countDown = this
 }

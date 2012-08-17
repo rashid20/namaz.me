@@ -1,4 +1,4 @@
-// author: Ahmad Mushtaq <ahmad.mushtaq@[gmail,me,outlook].com
+// author: Ahmad Mushtaq <ahmad.mushtaq@gmail.com
 function Locale(settings) {
 	this.dir = "ltr";
 	this.settings=settings;

@@ -1,4 +1,4 @@
-// author: Ahmad Mushtaq <ahmad.mushtaq@[gmail,me,outlook].com
+// author: Ahmad Mushtaq <ahmad.mushtaq@gmail.com
 function Adhan() {
 	// this hold the HTML element used.
 	this.audioElement = null;

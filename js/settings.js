@@ -1,4 +1,4 @@
-// author: Ahmad Mushtaq <ahmad.mushtaq@[gmail,me,outlook].com
+// author: Ahmad Mushtaq <ahmad.mushtaq@gmail.com
 // make sure cookie.js is included b4 this file
 function Settings() {
 	this.s = new Array()
