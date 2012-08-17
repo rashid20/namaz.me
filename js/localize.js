@@ -9,7 +9,7 @@ function Locale(settings) {
 Locale.prototype={
 	localize:function(lang){
 		this.ready=false;
-		if (!lang) lang=this.settings.s.lang();
+		if (!lang) lang=this.settings.lang();
 		$.ajax( 
 			{ 
 				url: "js/langjs/"+lang+".json",
