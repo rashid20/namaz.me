@@ -1,16 +1,13 @@
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
 
+// you can get api keys from ipinfodb for free, please dont abouse this.
 $data = file_get_contents("http://api.ipinfodb.com/v2/ip_query.php?ip=$ip&output=xml&key=a8ac40c258f4b1b9fecb27de7f091272979de523868d4b804e4b58ac9a0755b2");
  
 //Use backup server if cannot make a connection
 if (strlen($data) < 1){
-?>
-{
-	"success": 0
-}
-<?php
-        exit(0);
+	echo '{"success":0}';
+	exit(0);
 }
 
 $answer = new SimpleXMLElement($data);

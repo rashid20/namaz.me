@@ -1,16 +1,17 @@
 <?php
 $coordinates = $_GET["coords"];
+if (strlen($coordinates) < 1) {
+	echo '{"success":0}';
+	exit(0);
+}
 
+// you can get the keys from microsoft for free. please dont abuse this.
 $url = "http://dev.virtualearth.net/REST/v1/Locations/" . $coordinates . "?o=json&key=AqhV8vAz54rShnfvfslyAkFJPNXFk24J_ts7291GVG1hzVcesCorI9zkT4JCKF9I";
 $data = file_get_contents($url);
  
 if (strlen($data) < 1){
-?>
-{
-	"success": 0
-}
-<?php
-        exit(0);
+	echo '{"success":0}';
+	exit(0);
 }
 
 $json = json_decode($data, true);
@@ -22,7 +23,6 @@ if (strlen($locality) < 1) {
 $formattedAddress = $json["resourceSets"][0]["resources"][0]["address"]["formattedAddress"];
 
 header ("Content-type: application/json");
-//var_dump($json);
 ?>
 {
 	"success": 1,
