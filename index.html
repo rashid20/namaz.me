@@ -247,7 +247,7 @@ function handleGeolocationApi(position) {
 		}
 	})
 	updateNamazTimesAndSetCityCountry()
-	handleTime(latitude, longitude)
+	getTimeForLocation(latitude, longitude)
 }   
 function handleIpGeolocationJson(position){
 	latitude = position.latitude
@@ -256,7 +256,7 @@ function handleIpGeolocationJson(position){
 	city = position.cityName
 	
 	updateNamazTimesAndSetCityCountry()
-	handleTime(latitude, longitude)
+	getTimeForLocation(latitude, longitude)
 }
 function updateNamazTimesAndSetCityCountry(){
 	if (!namazTimesUpdated && latitude && longitude && locale.ready){
