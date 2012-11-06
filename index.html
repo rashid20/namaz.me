@@ -280,11 +280,13 @@ function handleTime(timeFromServer) {
 		timeFromServer = new Date(timeFromServer.time);
 		var localMachineTime = new Date();
 
-		var timeDiff = Math.abs(timeFromServer.getTime() - localMachineTime.getTime()); // seconds
+		var timeDiff = timeFromServer.getTime() - localMachineTime.getTime();
+		var ahead = (timeDiff<0) ? true : false;
+		timeDiff = Math.abs(timeDiff); // seconds
 		timeDiff = Math.floor(timeDiff / (1000*60)); // minutes
 
 		if (timeDiff > 50 ) {
-			showInfo("Your computer time is incorrect! It is incorrect by " + timeDiff + " minutes. Please fix your computer's time. Prayer times will be incorrect until you fix your computer's time.");
+			showInfo("Your computer time is incorrect! It is " + (ahead ? "ahead" : "behind") + " by " + timeDiff + " minutes. Please fix your computer's time. Prayer times will be incorrect until you fix your computer's time.");
 		}
 	}
 }
