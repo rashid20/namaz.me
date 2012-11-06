@@ -283,7 +283,6 @@ function handleTime(timeFromServer) {
 		var timeDiff = Math.abs(timeFromServer.getTime() - localMachineTime.getTime()); // seconds
 		timeDiff = Math.floor(timeDiff / (1000*60)); // minutes
 
-		timeDiff = 100;
 		if (timeDiff > 50 ) {
 			showInfo("Your computer time is incorrect! It is incorrect by " + timeDiff + " minutes. Please fix your computer's time. Prayer times will be incorrect until you fix your computer's time.");
 		}
