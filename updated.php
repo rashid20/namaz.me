@@ -24,6 +24,6 @@ if ($payload->ref == 'refs/heads/master') {
 // if commit was to th branch production, go one directory up and then call git pull there.
 else if ($payload->ref == 'refs/heads/production') {
 	file_put_contents($log_file,"pulling to production area.\n");
-	system("../production_pull.sh");
+	system("production_pull.sh");
 }
 ?>
